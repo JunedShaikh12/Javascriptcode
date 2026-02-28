@@ -194,8 +194,6 @@ const user = {
     welcomeFunction: function() {
         console.log(`This is a nested function ${this.Name}`); 
         console.log(this);
-           
-
     }
 }
 
