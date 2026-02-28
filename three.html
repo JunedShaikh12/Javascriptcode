@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+const div = document.createElement('h1')
+console.log(div);
+div.className = 'createdH1';
+// div.innerHTML = 'This is created h1 tag';
+
+const addtext = document.createTextNode('This is created text node')
+div.appendChild(addtext)
+document.body.appendChild(div)
+let otp = "";
+for(let i=1 ; i<=4;i++)
+{
+     otp += Math.floor(Math.random() * 10)
+}
+console.log(otp);
+
+const h1 = document.createElement('h1')
+h1.className = 'createdH1'
+h1.id = 'createdId'
+
+const text = document.createTextNode('This is created h1 tag')
+h1.appendChild(text)
+document.body.appendChild(h1)
+
+</script>
+</html>
