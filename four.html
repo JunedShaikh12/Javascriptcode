@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+  
+           //EDIT
+        const liItem = document.createElement('li') 
+        const addText = document.createTextNode('REACT')
+        liItem.appendChild(addText)
+        document.querySelector('.language').appendChild(liItem)
+
+        const li = document.createElement('li')
+        const text = document.createTextNode('.NET')
+        li.appendChild(text)
+        const liTag = document.querySelector('.language')
+        liTag.appendChild(li)
+
+       const secondElement =  document.querySelector('li:nth-child(3)')
+       secondElement.innerHTML = 'jjj'
+
+       const newli = document.createElement('li')
+       newli.innerHTML = 'Angular'
+       secondElement.replaceWith(newli)
+
+
+       const lastElement = document.querySelector('li:last-child')
+       lastElement.remove();
+        // function addLanguage(langName){
+        //     const li = document.createElement('li')
+        //     li.innerHTML = `${langName}`
+        //     document.querySelector('.language').appendChild(li)
+        // }
+        // addLanguage('juned')
+</script>
+
+</html>

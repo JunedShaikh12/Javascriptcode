@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body>
+    
+    <div>
+        <ul class="images">
+            <li style="padding:10px"><img id="one" src="" alt="one"></li>
+            <li style="padding:10px"><img id="two" src="" alt="two"></li>
+            <li style="padding:10px"><img id="three" src="" alt="three"></li>
+            <li style="padding:10px"><img id="four" src="" alt="four"></li>
+        </ul>
+    </div>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+</body>
+<script>
+    // document.getElementById('one').onclick = function() {
+    //     alert('One')
+    // } 
+
+    document.getElementById('one').addEventListener('click', function(e) {
+        console.log(e);
+        
+    } , false)
+
+    document.addEventListener("click", function(event) {
+    // console.log("X Position & Y Position:", event.clientX, event.clientY);
+});
+
+
+function helloFunction() {
+    console.log('HELLO FROM OUTER FUNCTION.....');
+    
+}
+document.getElementById('child').addEventListener('click', (e)=> {
+    console.log('Child');
+    helloFunction()
+    e.stopPropagation();
+    e.preventDefault();
+})
+
+document.getElementById('parent').addEventListener('click', ()=> {
+    console.log('parent');
+})
+document.getElementById('grandParent').addEventListener('click', ()=> {
+    console.log('grandParent');
+})
+</script>
+</html>
